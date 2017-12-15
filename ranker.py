@@ -8,3 +8,10 @@ Using the following formula to calculate BM25
 REFERENCE: https://xapian.org/docs/bm25.html
 '''
 
+# DEFINING CONSTANTS
+
+k1 = 1.2
+b = 0.75
+k2 = 100
+R = 0 #Since no relevance info is available
+
