@@ -23,3 +23,5 @@ def BM25(docLen, avDocLen, n, N, f, q, r):
     p3 = log((r + 0.5) * (N - n - R + r + 0.5)) / ((n - r + 0.5) * (R - r + 0.5))
     return p1 * p2 * p3
 
+def getK(docLen, avDocLen):
+    return k1 * ((1 - b) + b * (float(docLen) / float(avDocLen)))
