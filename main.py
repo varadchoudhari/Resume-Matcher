@@ -17,5 +17,8 @@ while option != "3":
     elif option == "2":
         print "Enter search query"
         keywords = raw_input("::")
-        search(keywords)
+        results = search(keywords)
+        print"\nThe Matching Resumes Are:"
+        for result in results:
+            print result[0]
 
