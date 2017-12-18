@@ -11,10 +11,10 @@ def get_avdl(length_index):
     return float(corpus_length) / float(len(length_index))
 
 def search(query):
-    inv_index_file = open("inverted_index.json","r")
+    inv_index_file = open("../dependency/indexes/inverted_index.json","r")
     inverted_index = json.load(inv_index_file)
 
-    length_index_file = open("length_index.json","r")
+    length_index_file = open("../dependency/indexes/length_index.json","r")
     length_index = json.load(length_index_file)
 
     scores = defaultdict(list)
