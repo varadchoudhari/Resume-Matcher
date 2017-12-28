@@ -4,9 +4,9 @@ import tokenizer
 import json
 
 
-def get_file_names(path):
+def get_file_names():
     files = []
-    for file in glob.glob(str(path)+"../dependency/documents/*.pdf"):
+    for file in glob.glob("../dependency/documents/*.pdf"):
         files.append(file)
     return files
 
@@ -17,8 +17,8 @@ def make_index(tokens, document_name, index, length):
         length[document_name] = len(set(tokens))
 
 
-def generator(path):
-    resume_files = get_file_names(path)
+def generator():
+    resume_files = get_file_names()
     inverted_index = defaultdict(list)
     length_index = defaultdict(list)
     for file in resume_files:
